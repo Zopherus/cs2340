@@ -21,9 +21,6 @@ public class Login {
     public void setPassword(String newPass) { password = newPass; }
 
     public boolean checkValid(String user, String pass) {
-        if (user.equals(username) && pass.equals(password)) {
-            return true;
-        }
-        return false;
+        return user.equals(username) && pass.equals(password);
     }
 }
