@@ -152,7 +152,6 @@
         android:id="@+id/spinner"
         android:layout_width="217dp"
         android:layout_height="38dp"
-        android:entries="Admin"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="421dp" />
 
