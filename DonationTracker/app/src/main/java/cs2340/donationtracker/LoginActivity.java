@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import cs2340.donationtracker.R;
+import cs2340.donationtracker.model.Account;
+import cs2340.donationtracker.model.Database;
 
 public class LoginActivity extends Activity {
 
@@ -46,14 +48,17 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                if (username.getText().toString().equals("user") && password.getText().toString().equals("pass")) {
-                    Intent applicationIntent = new Intent(LoginActivity.this, ApplicationActivity.class);
-                    Log.i("buttontest", "button pressed");
-                    startActivity(applicationIntent);
-                } else {
-                    dlgAlert.create();
-                    dlgAlert.show();
+                for (Account account : Database.accounts) {
+                    if (account.getUsername().equals(username.getText().toString()) &&
+                            account.getPassword().equals(password.getText().toString())) {
+                        Intent applicationIntent = new Intent(LoginActivity.this, ApplicationActivity.class);
+                        Log.i("buttontest", "button pressed");
+                        startActivity(applicationIntent);
+                        return;
+                    }
                 }
+                dlgAlert.create();
+                dlgAlert.show();
             }
         });
     }
