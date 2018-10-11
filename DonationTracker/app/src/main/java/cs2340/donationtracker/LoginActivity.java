@@ -49,6 +49,7 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
 
                 for (Account account : Database.accounts) {
+                    System.out.println(account.getUsername() + "   " + account.getPassword());
                     if (account.getUsername().equals(username.getText().toString()) &&
                             account.getPassword().equals(password.getText().toString())) {
                         Intent applicationIntent = new Intent(LoginActivity.this, ApplicationActivity.class);

@@ -24,9 +24,9 @@ public class RegisterActivity extends Activity {
         final Button registerButton = (Button) findViewById(R.id.registerButton);
         final Button cancelButton = (Button) findViewById(R.id.cancelButton);
 
-        final String name = ((EditText) findViewById((R.id.name_input))).getText().toString();
-        final String username = ((EditText) findViewById(R.id.username_input)).getText().toString();
-        final String password = ((EditText) findViewById(R.id.password_input)).getText().toString();
+        final EditText name = ((EditText) findViewById((R.id.name_input)));
+        final EditText username = ((EditText) findViewById(R.id.username_input));
+        final EditText password = ((EditText) findViewById(R.id.password_input));
         final Spinner accountType = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, AccountType.values());
@@ -36,7 +36,8 @@ public class RegisterActivity extends Activity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Account newAccount = new Account(name, username, password, (AccountType) accountType.getSelectedItem());
+                Account newAccount = new Account(name.getText().toString(), username.getText().toString(), password.getText().toString()
+                        ,(AccountType) accountType.getSelectedItem());
                 Database.accounts.add(newAccount);
                 Intent applicationIntent = new Intent(RegisterActivity.this, ApplicationActivity.class);
                 Log.i("buttontest", "button pressed");
