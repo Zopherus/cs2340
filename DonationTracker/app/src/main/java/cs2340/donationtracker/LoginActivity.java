@@ -1,16 +1,15 @@
 package cs2340.donationtracker;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import cs2340.donationtracker.R;
 import cs2340.donationtracker.model.Account;
 import cs2340.donationtracker.model.Database;
 
