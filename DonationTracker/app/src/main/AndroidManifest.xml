@@ -30,7 +30,11 @@
         <activity
             android:name=".ApplicationActivity"
             android:label="@string/title_activity_application" />
+<<<<<<< HEAD
         <activity android:name=".LocationDetailsActivity"></activity>
+=======
+        <activity android:name=".LocationDetailActivity"></activity>
+>>>>>>> bd02dc29b139298075c9ceeef2f96fcf46ebc20f
     </application>
 
 </manifest>

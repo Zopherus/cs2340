@@ -157,6 +157,7 @@
         android:id="@+id/spinner"
         android:layout_width="217dp"
         android:layout_height="38dp"
+<<<<<<< HEAD
         android:layout_marginStart="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="100dp"
@@ -164,6 +165,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+=======
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+>>>>>>> bd02dc29b139298075c9ceeef2f96fcf46ebc20f
 
 <TextView
         android:id="@+id/textView9"
