@@ -1,5 +1,7 @@
 package cs2340.donationtracker.model;
 
+import java.util.ArrayList;
+
 public class Location {
 
     private String name;
@@ -11,6 +13,7 @@ public class Location {
     private String state;
     private int zip;
     private String phone;
+    public ArrayList<Donation> donations = new ArrayList<Donation>();
 
     public Location(){}
 
@@ -101,6 +104,4 @@ public class Location {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-
-
 }

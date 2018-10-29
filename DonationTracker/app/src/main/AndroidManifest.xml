@@ -30,7 +30,11 @@
         <activity
             android:name=".ApplicationActivity"
             android:label="@string/title_activity_application" />
-        <activity android:name=".LocationDetailActivity"></activity>
+        <activity android:name=".LocationDetailActivity" />
+        <activity android:name=".AddDonationActivity" />
+        <activity
+            android:name=".DonationListActivity"
+            android:label="@string/title_activity_donation_list"></activity>
     </application>
 
 </manifest>

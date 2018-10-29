@@ -68,7 +68,6 @@ public class ApplicationActivity extends Activity {
                 }
                 first = false;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
         });
@@ -82,6 +81,4 @@ public class ApplicationActivity extends Activity {
             }
         });
     }
-
-
 }
