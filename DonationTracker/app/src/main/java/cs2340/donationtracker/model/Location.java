@@ -1,6 +1,6 @@
 package cs2340.donationtracker.model;
 
-public class Location {
+public class jLocation {
 
     private String name;
     private String type;
