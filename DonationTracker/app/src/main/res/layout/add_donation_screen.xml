@@ -14,6 +14,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
+        android:hint="Value"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
@@ -28,8 +29,8 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,15 +45,5 @@
         android:text="Add Donation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/valueTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="20dp"
-        android:text="Value:"
-        app:layout_constraintBottom_toTopOf="@+id/ItemValueEditText"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

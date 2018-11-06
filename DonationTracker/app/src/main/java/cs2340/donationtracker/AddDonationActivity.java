@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
@@ -32,10 +35,15 @@ public class AddDonationActivity extends AppCompatActivity {
         addDonationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("AAAAAAAAAAAAAAAAA" + LocalDateTime.now().toString());
                 Donation donation = new Donation(Double.parseDouble(valueTextView.getText().toString()),
                         Database.locations.get(position), LocalDateTime.now().toString(), nameTextView.getText().toString());
-                Database.locations.get(position).donations.add(donation);
+                Database.locations.get(position).donationArrayList.add(donation);
+
+                DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+                mDatabase.child("Locations").child(Integer.toString(position)).child("donations").child(donation.getName()).child("date").setValue(donation.getDate());
+                mDatabase.child("Locations").child(Integer.toString(position)).child("donations").child(donation.getName()).child("location").setValue(donation.getLocation().getName());
+                mDatabase.child("Locations").child(Integer.toString(position)).child("donations").child(donation.getName()).child("value").setValue(donation.getValue());
+
             }
         });
     }

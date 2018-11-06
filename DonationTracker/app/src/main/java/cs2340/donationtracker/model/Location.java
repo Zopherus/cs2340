@@ -1,6 +1,7 @@
 package cs2340.donationtracker.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Location {
 
@@ -13,7 +14,8 @@ public class Location {
     private String state;
     private int zip;
     private String phone;
-    public ArrayList<Donation> donations = new ArrayList<Donation>();
+    public HashMap<String, Object> donations = new HashMap<>(); //For firebase
+    public ArrayList<Donation>  donationArrayList = new ArrayList<>();
 
     public Location(){}
 

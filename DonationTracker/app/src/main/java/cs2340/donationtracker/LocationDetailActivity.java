@@ -20,6 +20,7 @@ public class LocationDetailActivity extends AppCompatActivity {
 
         Bundle extra = getIntent().getExtras();
         final int position = extra.getInt("LOCATION_INDEX");
+        System.out.println(Database.locations.size());
         Location location = Database.locations.get(position);
         final TextView locationNameText = (TextView) findViewById(R.id.locationNameText);
         final TextView locationTypeText = (TextView) findViewById(R.id.locationTypeText);
@@ -37,8 +38,6 @@ public class LocationDetailActivity extends AppCompatActivity {
         locationAddressText.setText(location.getStreetAddress() + " " + location.getCity()
                 + " " + location.getState() + " " + location.getZip());
         locationPhoneNumberText.setText(location.getPhone());
-
-
 
         addDonationButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -6,6 +6,8 @@ public class Donation {
     private String date;
     private String name;
 
+    public Donation(){}
+
     public Donation(double value, Location location, String date, String name){
         this.value = value;
         this.location = location;
