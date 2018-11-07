@@ -7,6 +7,9 @@ public class Database {
     public static ArrayList<Location> locations = new ArrayList<Location>();
 
     public static Location locationLookup(String name) {
+        if (name == null) {
+            return null;
+        }
         for (Location location : locations) {
             if (location.getName().equals(name))
                 return location;
