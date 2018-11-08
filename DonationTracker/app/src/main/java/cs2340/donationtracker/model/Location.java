@@ -1,6 +1,13 @@
 package cs2340.donationtracker.model;
 
+<<<<<<< HEAD
 public class jLocation {
+=======
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Location {
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
 
     private String name;
     private String type;
@@ -11,6 +18,8 @@ public class jLocation {
     private String state;
     private int zip;
     private String phone;
+    public HashMap<String, Object> donations = new HashMap<>(); //For firebase
+    public ArrayList<Donation>  donationArrayList = new ArrayList<>();
 
     public Location(){}
 
@@ -101,6 +110,4 @@ public class jLocation {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-
-
 }

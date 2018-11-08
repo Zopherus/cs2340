@@ -12,9 +12,18 @@ import android.widget.EditText;
 
 import cs2340.donationtracker.model.Account;
 import cs2340.donationtracker.model.Database;
-
+/**
+ * Activity for log in screen
+ *
+ * @author Eric Zhu
+ * @version 1.0
+ */
 public class LoginActivity extends Activity {
-
+    /**
+     * Method for what to do when log in screen is opened
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +36,11 @@ public class LoginActivity extends Activity {
         final EditText password = (EditText) findViewById(R.id.password_input);
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * method for starting an activity when cancel button pressed
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LoginActivity.this,MainActivity.class);
@@ -44,6 +58,11 @@ public class LoginActivity extends Activity {
                     }
                 });
         loginButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * starts activity when login button pressed to launch the app
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
 
