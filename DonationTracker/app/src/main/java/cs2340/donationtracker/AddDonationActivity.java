@@ -17,9 +17,15 @@ import java.util.Date;
 
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;
-
+/**
+ * @author      Eric Zhu
+ * @version     1.0
+ */
 public class AddDonationActivity extends AppCompatActivity {
-
+    /**
+     * method for what to do when donation screen is opened
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +39,10 @@ public class AddDonationActivity extends AppCompatActivity {
         final Button addDonationButton = (Button) findViewById(R.id.AddDonationToLocationButton);
 
         addDonationButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * what happens when something is clicked on the donation screen
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Donation donation = new Donation(Double.parseDouble(valueTextView.getText().toString()),

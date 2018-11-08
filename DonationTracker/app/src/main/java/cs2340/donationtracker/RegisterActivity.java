@@ -13,9 +13,16 @@ import android.widget.Spinner;
 import cs2340.donationtracker.model.Account;
 import cs2340.donationtracker.model.AccountType;
 import cs2340.donationtracker.model.Database;
-
+/**
+ * @author      Eric Zhu
+ * @version     1.0
+ */
 public class RegisterActivity extends Activity {
 
+    /**
+     * method for what happens when the registration screen is open
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +41,10 @@ public class RegisterActivity extends Activity {
         accountType.setAdapter(adapter);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * what happens when the register button is clicked
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Account newAccount = new Account(name.getText().toString(), username.getText().toString(), password.getText().toString()
@@ -46,6 +57,10 @@ public class RegisterActivity extends Activity {
         });
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * what happens when the cancel button is clicked
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent applicationIntent = new Intent(RegisterActivity.this, MainActivity.class);
