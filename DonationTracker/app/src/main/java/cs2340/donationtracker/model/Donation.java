@@ -5,14 +5,16 @@ public class Donation {
     private Location location;
     private String date;
     private String name;
+    private String type;
 
     public Donation(){}
 
-    public Donation(double value, Location location, String date, String name){
+    public Donation(double value, Location location, String date, String name, String type){
         this.value = value;
         this.location = location;
         this.date = date;
         this.name = name;
+        this.type = type;
     }
 
     public double getValue() {
@@ -45,6 +47,14 @@ public class Donation {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override

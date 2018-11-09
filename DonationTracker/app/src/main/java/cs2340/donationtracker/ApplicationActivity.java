@@ -35,6 +35,7 @@ public class ApplicationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.application_screen);
 
+        System.out.println("HELLO");
 
         final Button logoutButton = (Button) findViewById(R.id.logoutButton);
         final Button allDonationsButton = findViewById(R.id.AllDonationsButton);
@@ -57,7 +58,8 @@ public class ApplicationActivity extends Activity {
                         String name = names[i].toString();
                         HashMap<String, Object> map = (HashMap<String, Object>) location.donations.get(name);
                         Donation donation = new Donation(Double.parseDouble(map.get("value").toString()),
-                                Database.locationLookup(map.get("location").toString()), map.get("date").toString(), name);
+                                Database.locationLookup(map.get("location").toString()),
+                                map.get("date").toString(), name, map.get("type").toString());
                         location.donationArrayList.add(donation);
                     }
                 }
