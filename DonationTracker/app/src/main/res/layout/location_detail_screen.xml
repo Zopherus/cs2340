@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocationDetailActivity">
+    tools:context=".LocationDetailActivity"
+    android:background="@drawable/locationdeats">
 
     <TextView
         android:id="@+id/locationNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="105dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,8 +22,8 @@
         android:id="@+id/locationTypeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationNameText" />
@@ -31,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationTypeText" />
@@ -39,29 +41,29 @@
     <TextView
         android:id="@+id/locationLatitudeText"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="84dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
         android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationLongitudeText" />
+        app:layout_constraintStart_toEndOf="@+id/locationLongitudeText"
+        app:layout_constraintTop_toBottomOf="@+id/locationTypeText" />
 
     <TextView
         android:id="@+id/locationAddressText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="72dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locationLatitudeText" />
+        app:layout_constraintTop_toBottomOf="@+id/locationLongitudeText" />
 
     <TextView
         android:id="@+id/locationPhoneNumberText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationAddressText" />
@@ -69,23 +71,25 @@
     <Button
         android:id="@+id/addDonationButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="8dp"
         android:text="Add Donation"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ViewDonationsButton"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ViewDonationsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="108dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="36dp"
         android:text="View Donations"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

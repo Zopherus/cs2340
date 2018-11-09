@@ -27,9 +27,17 @@ import java.util.List;
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;
 import cs2340.donationtracker.model.Location;
-
+/**
+ * @author      Eric
+ * @version     1.0
+ * @since       1.2
+ */
 public class ApplicationActivity extends Activity {
 
+    /**
+     * method for what happens when the application screen is open
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +55,10 @@ public class ApplicationActivity extends Activity {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Locations");
         final ApplicationActivity activity = this;
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            /**
+             * what happens when some data is changed on the application screen
+             * @param dataSnapshot
+             */
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
@@ -69,6 +81,10 @@ public class ApplicationActivity extends Activity {
                 locationListView.setAdapter(adapter);
             }
 
+            /**
+             * what happens when there is an error
+             * @param databaseError
+             */
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.e("canceled", "onCancelled", databaseError.toException());
@@ -76,11 +92,18 @@ public class ApplicationActivity extends Activity {
         });
 
         locationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            /**
+             * what happens when an item is clicked on
+             * @param parent
+             * @param view
+             * @param position
+             * @param id
+             */
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent loginIntent = new Intent(ApplicationActivity.this, LocationDetailActivity.class);
                 loginIntent.putExtra("LOCATION_INDEX", position);
-                Log.i("buttontest", "button pressed");
+                Log.i("button test", "button pressed");
                 startActivity(loginIntent);
             }
         });
@@ -88,14 +111,32 @@ public class ApplicationActivity extends Activity {
 
         locationSearchEditText.addTextChangedListener(new TextWatcher() {
 
+            /**
+             * happens after the text is edited
+             * @param s
+             */
             @Override
             public void afterTextChanged(Editable s) {}
 
+            /**
+             * happens before the text is edited
+             * @param s
+             * @param start
+             * @param count
+             * @param after
+             */
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
             }
 
+            /**
+             * happens when the text changes
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {
@@ -116,28 +157,40 @@ public class ApplicationActivity extends Activity {
             }
         });
         logoutButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * what happens when the log out button is clicked
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(ApplicationActivity.this, MainActivity.class);
-                Log.i("buttontest", "button pressed");
+                Log.i("button test", "button pressed");
                 startActivity(loginIntent);
             }
         });
         allDonationsButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * when the all donations button is clicked
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(ApplicationActivity.this,DonationListActivity.class);
                 loginIntent.putExtra("LOCATION_INDEX", -1);
-                Log.i("buttontest", "button pressed");
+                Log.i("button test", "button pressed");
                 startActivity(loginIntent);
             }
         });
 
         mapButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * happens when the map button is clicked
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(ApplicationActivity.this,MapActivity.class);
-                Log.i("buttontest", "button pressed");
+                Log.i("button test", "button pressed");
                 startActivity(loginIntent);
             }
         });
