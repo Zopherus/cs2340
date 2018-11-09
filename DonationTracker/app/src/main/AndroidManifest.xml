@@ -40,6 +40,9 @@
             android:name=".ApplicationActivity"
             android:label="@string/title_activity_application" />
         <activity android:name=".LocationDetailActivity" />
+<<<<<<< HEAD
+        <activity android:name=".addDonation"></activity>
+=======
         <activity android:name=".AddDonationActivity" />
         <activity
             android:name=".DonationListActivity"
@@ -60,6 +63,7 @@
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map"></activity>
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
     </application>
 
 </manifest>

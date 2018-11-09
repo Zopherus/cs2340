@@ -19,9 +19,18 @@ import java.util.ArrayList;
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;
 import cs2340.donationtracker.model.Location;
-
+/**
+ * Activity for list of Donations
+ *
+ * @author Eric Zhu
+ * @version 1.0
+ */
 public class DonationListActivity extends Activity {
-
+    /**
+     * OnCreate method for donation list
+     *
+     * @param savedInstanceState, a Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +95,14 @@ public class DonationListActivity extends Activity {
 
 
         donationList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            /**
+             * method to start activity for logging in
+             *
+             * @param parent AdapterView
+             * @param view View
+             * @param position, an int
+             * @param id, a long
+             */
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent loginIntent = new Intent(DonationListActivity.this, DonationDetailActivity.class);
@@ -108,14 +125,35 @@ public class DonationListActivity extends Activity {
         final DonationListActivity activity = this;
         nameTextEdit.addTextChangedListener(new TextWatcher() {
 
+            /**
+             * overrides afterTextChanged with an editable param
+             *
+             * @param s an editable
+             */
             @Override
             public void afterTextChanged(Editable s) {}
 
+            /**
+             * overrides beforeTextChanged with an editable param
+             *
+             * @param s, a CharSequence
+             * @param start
+             * @param count
+             * @param after
+             */
             @Override
             public void beforeTextChanged(CharSequence s, int start,
                                           int count, int after) {
             }
 
+            /**
+             * overrides onTextChanged with an editable param
+             *
+             * @param s, a CharSequence
+             * @param start
+             * @param before
+             * @param count
+             */
             @Override
             public void onTextChanged(CharSequence s, int start,
                                       int before, int count) {

@@ -11,17 +11,31 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+=======
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/exo_light"
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
         android:text="Password"
         android:textColor="#565656"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+=======
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_input" />
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
 
     <EditText
         android:id="@+id/password_input"
@@ -43,25 +57,53 @@
     <EditText
         android:id="@+id/username_input"
         android:layout_width="216dp"
+<<<<<<< HEAD
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+=======
         android:layout_height="37dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
         android:layout_marginStart="44dp"
         android:layout_marginTop="4dp"
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
+<<<<<<< HEAD
+        android:text="username"
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_input"
+        app:layout_constraintVertical_bias="1.0" />
+=======
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
+<<<<<<< HEAD
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="1dp"
+=======
         android:layout_height="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/exo_light"
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
         android:text="Username"
         android:textColor="#565656"
         android:textSize="18sp"
@@ -158,12 +200,22 @@
         android:id="@+id/spinner"
         android:layout_width="217dp"
         android:layout_height="38dp"
+<<<<<<< HEAD
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+=======
         android:layout_marginStart="44dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
 
-    <TextView
+<TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="31dp"

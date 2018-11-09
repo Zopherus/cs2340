@@ -7,9 +7,19 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
+/**
+ * Creates an AVL Tree
+ *
+ * @author Eric Zhu
+ * @version 1.0
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * onCreate method to show opening screen with login and register button
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         final Button loginButton = (Button) findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new OnClickListener() {
+            /**
+             * launches login when login button is clicked
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
@@ -27,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         registerButton.setOnClickListener(new OnClickListener() {
+            /**
+             * launches registration when register button is clicked
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(MainActivity.this,RegisterActivity.class);

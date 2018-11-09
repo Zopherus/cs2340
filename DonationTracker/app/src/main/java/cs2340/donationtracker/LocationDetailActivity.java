@@ -10,9 +10,20 @@ import android.widget.TextView;
 
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Location;
-
+/**
+ * Activity to input location information
+ *
+ * @author Eric Zhu
+ * @version 1.0
+ */
 public class LocationDetailActivity extends AppCompatActivity {
 
+
+    /**
+     * onCreate method for location information buttons
+     *
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +51,11 @@ public class LocationDetailActivity extends AppCompatActivity {
         locationPhoneNumberText.setText(location.getPhone());
 
         addDonationButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * starts activity for a log in intent
+             *
+             * @param v View
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LocationDetailActivity.this, AddDonationActivity.class);
@@ -50,6 +66,11 @@ public class LocationDetailActivity extends AppCompatActivity {
         });
 
         viewDonationsButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * starts activity for a log in intent
+             *
+             * @param v View
+             */
             @Override
             public void onClick(View v) {
                 Intent loginIntent = new Intent(LocationDetailActivity.this, DonationListActivity.class);

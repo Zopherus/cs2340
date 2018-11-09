@@ -18,8 +18,13 @@ import java.util.Date;
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;
 /**
+<<<<<<< HEAD
  * @author      Eric Zhu
  * @version     1.0
+=======
+ * @author Eric Zhu
+ * @version 1.0
+>>>>>>> b95e133297487d52fdab146412b3e86bc4e9bb67
  */
 public class AddDonationActivity extends AppCompatActivity {
     /**

@@ -1,5 +1,8 @@
 package cs2340.donationtracker.model;
 
+<<<<<<< HEAD
+public class jLocation {
+=======
 import java.util.ArrayList;
 import java.util.HashMap;
 /**
@@ -8,6 +11,7 @@ import java.util.HashMap;
  * @since       1.2
  */
 public class Location {
+>>>>>>> 814e76885da791ad176487316363fd0e9858bfd2
 
     private String name;
     private String type;

@@ -12,11 +12,20 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Location;
-
+/**
+ * Map Activity to show map of locations
+ *
+ * @author Eric Zhu
+ * @version 1.0
+ */
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    /**
+     * sets view to show the map when this screen is called
+     *
+     * @param savedInstanceState Bundle object
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
