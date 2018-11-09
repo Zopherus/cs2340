@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -61,12 +60,12 @@ public class DonationListActivity extends Activity {
 
 
         if (location_index == -1) {
-            final ArrayList<String> donationNames = new ArrayList<String>();
+            final ArrayList<String> donationNames = new ArrayList<>();
             for (Location location : Database.locations) {
                 for (Donation donation : location.donationArrayList)
                     donationNames.add(donation.getName());
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                     android.R.layout.simple_list_item_1, donationNames);
             adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
             donationList.setAdapter(adapter);
@@ -96,7 +95,7 @@ public class DonationListActivity extends Activity {
 
                         if (display.size() == 0)
                             display.add("No items with that name.");
-                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                                 android.R.layout.simple_list_item_1, display);
                         adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                         donationList.setAdapter(adapter);
@@ -110,7 +109,7 @@ public class DonationListActivity extends Activity {
 
                         if (display.size() == 0)
                             display.add("No items with that type.");
-                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                        ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                                 android.R.layout.simple_list_item_1, display);
                         adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                         donationList.setAdapter(adapter);
@@ -142,11 +141,11 @@ public class DonationListActivity extends Activity {
             }
         });
 
-        ArrayList<String> donationNames = new ArrayList<String>();
+        ArrayList<String> donationNames = new ArrayList<>();
         for (Donation donation : donations) {
             donationNames.add(donation.getName());
         }
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, donationNames);
         adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
         donationList.setAdapter(adapter);
@@ -196,7 +195,7 @@ public class DonationListActivity extends Activity {
 
                     if (display.size() == 0)
                         display.add("No items with that name.");
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                             android.R.layout.simple_list_item_1, display);
                     adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                     donationList.setAdapter(adapter);
@@ -209,7 +208,7 @@ public class DonationListActivity extends Activity {
 
                     if (display.size() == 0)
                         display.add("No items with that type.");
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                             android.R.layout.simple_list_item_1, display);
                     adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                     donationList.setAdapter(adapter);

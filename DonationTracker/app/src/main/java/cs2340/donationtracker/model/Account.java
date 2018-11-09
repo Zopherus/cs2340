@@ -25,8 +25,8 @@ public class Account {
     /**
      * creates an account with the given username and password
      * sets default name to empty string
-     * @param username
-     * @param password
+     * @param username the username
+     * @param password the password
      */
     public Account(String username, String password) {
         this("", username, password, AccountType.User);
@@ -34,10 +34,10 @@ public class Account {
 
     /**
      * makes an account with the given name, username, password, and account type
-     * @param name
-     * @param username
-     * @param password
-     * @param accountType
+     * @param name the name of the person
+     * @param username the username of the account
+     * @param password the password of the account
+     * @param accountType the account type of the account
      */
     public Account(String name, String username, String password, AccountType accountType ) {
         this.name = name;

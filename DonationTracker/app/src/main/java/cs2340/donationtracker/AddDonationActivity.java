@@ -1,9 +1,8 @@
 package cs2340.donationtracker;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,11 +10,8 @@ import android.widget.TextView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.w3c.dom.Text;
 
 import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
 
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;

@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Donation;
@@ -51,7 +51,7 @@ public class ApplicationActivity extends Activity {
         final ListView locationListView = (ListView) findViewById(R.id.LocationListView);
         final EditText locationSearchEditText = (EditText) findViewById(R.id.LocationSearchEditText);
 
-        final ArrayList<String> locationNames = new ArrayList<String>();
+        final ArrayList<String> locationNames = new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Locations");
         final ApplicationActivity activity = this;
         mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -66,8 +66,8 @@ public class ApplicationActivity extends Activity {
                     Database.locations.add(location);
                     locationNames.add(location.getName());
                     Object[] names = location.donations.keySet().toArray();
-                    for (int i = 0; i < names.length; i++) {
-                        String name = names[i].toString();
+                    for (Object o : names) {
+                        String name = o.toString();
                         HashMap<String, Object> map = (HashMap<String, Object>) location.donations.get(name);
                         Donation donation = new Donation(Double.parseDouble(map.get("value").toString()),
                                 Database.locationLookup(map.get("location").toString()),
@@ -75,7 +75,7 @@ public class ApplicationActivity extends Activity {
                         location.donationArrayList.add(donation);
                     }
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                         android.R.layout.simple_list_item_1, locationNames);
                 adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                 locationListView.setAdapter(adapter);
@@ -150,7 +150,7 @@ public class ApplicationActivity extends Activity {
 
                 if (display.size() == 0)
                     display.add("No locations with that name.");
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(activity,
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(activity,
                         android.R.layout.simple_list_item_1, display);
                 adapter.setDropDownViewResource(android.R.layout.simple_expandable_list_item_1);
                 locationListView.setAdapter(adapter);

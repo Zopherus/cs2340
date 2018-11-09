@@ -18,7 +18,7 @@ public class Location {
     private String state;
     private int zip;
     private String phone;
-    public HashMap<String, Object> donations = new HashMap<>(); //For firebase
+    public HashMap<String, Object> donations = new HashMap<>();
     public ArrayList<Donation>  donationArrayList = new ArrayList<>();
 
     /**
@@ -38,7 +38,7 @@ public class Location {
      * @param phone
      * @param zip
      */
-    public void jLocation(String name, String type, double latitude, double longitude, String streetAddress,
+    public Location(String name, String type, double latitude, double longitude, String streetAddress,
                           String city, String state, String phone, int zip) {
         this.name = name;
         this.type = type;
@@ -113,14 +113,14 @@ public class Location {
     }
 
     /**
-     * @return the zipcode of the location
+     * @return the zip-code of the location
      */
     public int getZip() {
         return zip;
     }
 
     /**
-     * set the zipcode of the location to the passed in int
+     * set the zip-code of the location to the passed in int
      * @param zip
      */
     public void setZip(int zip) {

@@ -3,9 +3,7 @@ package cs2340.donationtracker.model;
  * @author      Eric
  * @version     1.0
  * @since       1.2
- */
-
-/**
+ **
  * types of accounts that can be created
  */
 public enum AccountType {
@@ -20,5 +18,5 @@ public enum AccountType {
     /**
      * user - someone who is making a donation
      */
-    User;
+    User
 }

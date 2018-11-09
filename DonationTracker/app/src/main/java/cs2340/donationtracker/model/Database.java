@@ -7,8 +7,7 @@ import java.util.ArrayList;
  * @since       1.2
  */
 public class Database {
-    public static ArrayList<Account> accounts = new ArrayList<>();
-    public static ArrayList<Location> locations = new ArrayList<Location>();
+    public static ArrayList<Location> locations = new ArrayList<>();
 
     /**
      * looks up if there is a location with the passed in name

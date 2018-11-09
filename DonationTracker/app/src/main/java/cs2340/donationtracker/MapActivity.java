@@ -10,6 +10,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+
 import cs2340.donationtracker.model.Database;
 import cs2340.donationtracker.model.Location;
 /**
@@ -20,7 +22,6 @@ import cs2340.donationtracker.model.Location;
  */
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
     /**
      * sets view to show the map when this screen is called
      *
@@ -48,18 +49,22 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
+        for (Location location : Database.locations) {
+            LatLng l = new LatLng(location.getLatitude(), location.getLongitude());
+            googleMap.addMarker(new MarkerOptions().position(l).title(location.getName() + " " + location.getPhone()));
+        }
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(averageLatLng(Database.locations), 10));
+    }
 
+    public LatLng averageLatLng(ArrayList<Location> locations) {
         double avgLat = 0;
         double avgLong = 0;
         double count = 0;
-        for (Location location : Database.locations) {
-            LatLng l = new LatLng(location.getLatitude(), location.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(l).title(location.getName() + " " + location.getPhone()));
+        for (Location location : locations) {
             avgLat += location.getLatitude();
             avgLong += location.getLongitude();
             count++;
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(avgLat/count, avgLong/count), 10));
+        return new LatLng(avgLat/count, avgLong/count);
     }
 }
