@@ -25,7 +25,6 @@ public class DonationTest {
         donations.add(donation1);
         donations.add(donation2);
         donations.add(donation3);
-        assertNull(data.locationLookup(null));
     }
 
     @Test
