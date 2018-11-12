@@ -31,14 +31,14 @@ public class LocationDetailActivity extends AppCompatActivity {
         final int position = extra.getInt("LOCATION_INDEX");
         System.out.println(Database.locations.size());
         Location location = Database.locations.get(position);
-        final TextView locationNameText = (TextView) findViewById(R.id.locationNameText);
-        final TextView locationTypeText = (TextView) findViewById(R.id.locationTypeText);
-        final TextView locationLongitudeText = (TextView) findViewById(R.id.locationLongitudeText);
-        final TextView locationLatitudeText = (TextView) findViewById(R.id.locationLatitudeText);
-        final TextView locationAddressText = (TextView) findViewById(R.id.locationAddressText);
-        final TextView locationPhoneNumberText = (TextView) findViewById(R.id.locationPhoneNumberText);
-        final Button addDonationButton = (Button) findViewById(R.id.addDonationButton);
-        final Button viewDonationsButton = (Button) findViewById(R.id.ViewDonationsButton);
+        final TextView locationNameText = findViewById(R.id.locationNameText);
+        final TextView locationTypeText = findViewById(R.id.locationTypeText);
+        final TextView locationLongitudeText = findViewById(R.id.locationLongitudeText);
+        final TextView locationLatitudeText = findViewById(R.id.locationLatitudeText);
+        final TextView locationAddressText = findViewById(R.id.locationAddressText);
+        final TextView locationPhoneNumberText = findViewById(R.id.locationPhoneNumberText);
+        final Button addDonationButton = findViewById(R.id.addDonationButton);
+        final Button viewDonationsButton = findViewById(R.id.ViewDonationsButton);
 
         locationNameText.setText(location.getName());
         locationTypeText.setText(location.getType());

@@ -31,13 +31,14 @@ public class AddDonationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_donation_screen);
 
+
         Bundle extra = getIntent().getExtras();
         final int position = extra.getInt("LOCATION_INDEX");
 
-        final TextView nameTextView = (TextView) findViewById(R.id.ItemNameEditText);
-        final TextView valueTextView = (TextView) findViewById(R.id.ItemValueEditText);
+        final TextView nameTextView = findViewById(R.id.ItemNameEditText);
+        final TextView valueTextView = findViewById(R.id.ItemValueEditText);
         final TextView typeTextView = findViewById(R.id.ItemTypeEditText);
-        final Button addDonationButton = (Button) findViewById(R.id.AddDonationToLocationButton);
+        final Button addDonationButton = findViewById(R.id.AddDonationToLocationButton);
 
         addDonationButton.setOnClickListener(new View.OnClickListener() {
             /**

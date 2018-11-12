@@ -42,7 +42,7 @@ public class DonationListActivity extends Activity {
         final RadioButton typeRadio = findViewById(R.id.ItemTypeRadioButton);
         final RadioGroup radioGroup = findViewById(R.id.RadioGroup);
 
-        final ListView donationList = (ListView) findViewById(R.id.DonationItemListView);
+        final ListView donationList = findViewById(R.id.DonationItemListView);
         final EditText nameTextEdit = findViewById(R.id.DonationItemNameEditText);
 
 

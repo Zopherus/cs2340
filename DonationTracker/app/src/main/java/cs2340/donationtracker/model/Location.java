@@ -18,8 +18,8 @@ public class Location {
     private String state;
     private int zip;
     private String phone;
-    public HashMap<String, Object> donations = new HashMap<>();
-    public ArrayList<Donation>  donationArrayList = new ArrayList<>();
+    final public HashMap<String, Object> donations = new HashMap<>();
+    final public ArrayList<Donation>  donationArrayList = new ArrayList<>();
 
     /**
      * creates a new location without setting any of the attributes

@@ -30,10 +30,10 @@ public class DonationDetailActivity extends AppCompatActivity {
         final int location_index = extra.getInt("LOCATION_INDEX");
         final int donation_index = extra.getInt("DONATION_INDEX");
 
-        final TextView nameTextView = (TextView) findViewById(R.id.DonationNameTextView);
-        final TextView valueTextView = (TextView) findViewById(R.id.DonationValueTextView);
-        final TextView dateTextView = (TextView) findViewById(R.id.DonationDateTextView);
-        final TextView locationTextView = (TextView) findViewById(R.id.DonationLocationTextView);
+        final TextView nameTextView = findViewById(R.id.DonationNameTextView);
+        final TextView valueTextView = findViewById(R.id.DonationValueTextView);
+        final TextView dateTextView = findViewById(R.id.DonationDateTextView);
+        final TextView locationTextView = findViewById(R.id.DonationLocationTextView);
 
         Location location = Database.locations.get(location_index);
         Donation donation = location.donationArrayList.get(donation_index);
