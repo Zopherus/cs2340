@@ -33,11 +33,11 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
 
-        final Button cancelButton = (Button) findViewById(R.id.cancelButton);
-        final Button loginButton = (Button) findViewById(R.id.loginButton);
+        final Button cancelButton = findViewById(R.id.cancelButton);
+        final Button loginButton = findViewById(R.id.loginButton);
 
-        final EditText username = (EditText) findViewById(R.id.username_input);
-        final EditText password = (EditText) findViewById(R.id.password_input);
+        final EditText username = findViewById(R.id.username_input);
+        final EditText password = findViewById(R.id.password_input);
 
         final FirebaseAuth mAuth = FirebaseAuth.getInstance();
         final LoginActivity activity = this;

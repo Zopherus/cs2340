@@ -71,6 +71,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
             avgLong += location.getLongitude();
             count++;
         }
+        if (count == 0)
+            return new LatLng(0,0);
+
         return new LatLng(avgLat/count, avgLong/count);
     }
 }

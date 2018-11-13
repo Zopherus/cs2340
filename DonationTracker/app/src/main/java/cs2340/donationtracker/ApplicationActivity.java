@@ -45,11 +45,11 @@ public class ApplicationActivity extends Activity {
 
         System.out.println("HELLO");
 
-        final Button logoutButton = (Button) findViewById(R.id.logoutButton);
+        final Button logoutButton = findViewById(R.id.logoutButton);
         final Button allDonationsButton = findViewById(R.id.AllDonationsButton);
         final Button mapButton = findViewById(R.id.MapButton);
-        final ListView locationListView = (ListView) findViewById(R.id.LocationListView);
-        final EditText locationSearchEditText = (EditText) findViewById(R.id.LocationSearchEditText);
+        final ListView locationListView =  findViewById(R.id.LocationListView);
+        final EditText locationSearchEditText = findViewById(R.id.LocationSearchEditText);
 
         final ArrayList<String> locationNames = new ArrayList<>();
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("Locations");

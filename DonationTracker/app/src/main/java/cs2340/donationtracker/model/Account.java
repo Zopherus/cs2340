@@ -4,7 +4,7 @@ package cs2340.donationtracker.model;
  * @version     1.0
  * @since       1.2
  */
-public class Account {
+class Account {
 
     private String name;
     private String username;
