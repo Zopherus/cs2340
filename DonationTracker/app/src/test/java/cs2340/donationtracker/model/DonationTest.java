@@ -22,17 +22,12 @@ public class DonationTest {
     @Test
     public void donationNull() {
         assertNull(donation3);
-        assertEquals(null, donation3.getValue());
-        assertEquals(null, donation3.getName());
-        assertEquals(null, donation3.getType());
-        assertEquals(null, donation3.getLocation());
     }
 
     @Test
     public void donationNotNull() {
         assertNotNull(donation1);
         assertNotNull(donation2);
-        assertSame(donation1, donation2);
         assertNotNull(donation1.getLocation());
         assertNotNull(donation1.getValue());
         assertNotNull(donation1.getName());
