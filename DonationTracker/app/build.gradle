@@ -22,14 +22,9 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-<<<<<<< HEAD
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:support-media-compat:28.0.0'
-=======
     implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
     //noinspection GradleCompatible
     implementation 'com.android.support:support-media-compat:28.0.0-rc02'
->>>>>>> a34701d4c088429800de406529260592ed2ba817
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.google.firebase:firebase-auth:16.0.5'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'

@@ -32,8 +32,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map_screen);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
@@ -56,15 +56,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(averageLatLng(Database.locations), 10));
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Finds average latitude and longitude and places in a LatLng object
      *
      * @param locations, arrayList of locations
      * @return new LatLng() object
      */
->>>>>>> a34701d4c088429800de406529260592ed2ba817
     public static LatLng averageLatLng(ArrayList<Location> locations) {
         double avgLat = 0;
         double avgLong = 0;
