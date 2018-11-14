@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
+/**
+ * @author Mary Xu
+ * @version 1.0
+ */
 public class DatabaseTest {
     private Location l1 = new Location("l1", "charity", 0, 0, "hello hello hello", "hello", "hello",
             "hello", 30000);
