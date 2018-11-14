@@ -56,7 +56,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(averageLatLng(Database.locations), 10));
     }
 
-    private LatLng averageLatLng(ArrayList<Location> locations) {
+    public static LatLng averageLatLng(ArrayList<Location> locations) {
         double avgLat = 0;
         double avgLong = 0;
         double count = 0;

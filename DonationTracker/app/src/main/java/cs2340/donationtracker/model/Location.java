@@ -186,4 +186,30 @@ public class Location {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
+
+    /**
+     * Returns the total value of all the donations at this location
+     */
+    public double totalValueOfDonations() {
+        double total = 0;
+        for (Donation donation : donationArrayList) {
+            total += donation.getValue();
+        }
+        return total;
+    }
+
+    /**
+     * Removes a donation from this location, note that case matters
+     * @param name the name of the donation to be removed
+     * @return true if a donation is sucessfully removed, false otherwise
+     */
+    public boolean removeDonation(String name) {
+        for (int i = 0; i < donationArrayList.size(); i++) {
+            if (donationArrayList.get(i).getName().equals(name)) {
+                donationArrayList.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
